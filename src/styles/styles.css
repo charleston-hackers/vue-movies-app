@@ -1,0 +1,31 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.bold{
+    font-weight: bold;
+}
+.videoContainer{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 2rem;
+}
+.video{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.genre{
+    display: inline-block;
+    border-left: 1px solid #333;
+    padding: 0rem 1rem;
+}
+.firstGenre{
+    border-left: none;
+}
