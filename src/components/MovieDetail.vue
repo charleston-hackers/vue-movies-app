@@ -1,18 +1,22 @@
 <template>
     <section>
-            <div class='movieDetails' style="width: 100%; height: auto">
-                <h2>{{ movieTitle }}</h2>
-                <img :src='imageUrlPartial + poster' :alt='"backdrop movie image for " + movieTitle' :title='"Get more details about " + movieTitle'>
-                <p><span class='bold'>Released:</span> {{ releaseDate }}</p>
-                <p><span class='bold'>Score:</span> {{ voteAverage }}</p>
-                <p><span class='bold'>Total votes:</span> {{ voteCount }}</p>
-                <p><span class='bold'>Synopsys:</span> {{ overview }}</p>
-                <p><span class='bold'>Genres:</span> <span class='genre' v-for='genre in genres' v-bind:key='genre'>{{ genre.name }}</span></p>
-                <div v-for='(video, index) in videos' :key='index' class='videoContainer'>
-                    <iframe class='video' :src='youtubePartial + video.key' frameborder="0" allowfullscreen></iframe>
-                </div>
+        <div>
+            <router-link :to='{name: "CurrentlyPlaying"}'>Return to movie list</router-link>
+        </div>
+        <div class='movieDetails' style="width: 100%; height: auto">
+            <h1>Movie details for {{ movieTitle }}</h1>
+            <img :src='imageUrlPartial + poster' :alt='"backdrop movie image for " + movieTitle' :title='"Get more details about " + movieTitle'>
+            <h2>{{ movieTitle }}</h2>
+            <p><span class='bold'>Released:</span> {{ releaseDate }}</p>
+            <p><span class='bold'>Score:</span> {{ voteAverage }}</p>
+            <p><span class='bold'>Total votes:</span> {{ voteCount }}</p>
+            <p><span class='bold'>Synopsys:</span> {{ overview }}</p>
+            <p><span class='bold'>Genres:</span> <span class='genre' v-for='genre in genres' v-bind:key='genre'>{{ genre.name }}</span></p>
+            <div v-for='(video, index) in videos' :key='index' class='videoContainer'>
+                <iframe class='video' :src='youtubePartial + video.key' frameborder="0" allowfullscreen></iframe>
             </div>
-        </section>
+        </div>
+    </section>
 </template>
 
 <script>
