@@ -7,6 +7,32 @@ body{
 .bold{
     font-weight: bold;
 }
+.movieCardLink{
+    text-decoration: none;
+    color: inherit;
+}
+#movieList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-display: flex;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    width: 100%;
+}
+.movieCard{
+    display: inline-block;
+    width: 100%;
+    max-width: 50rem;
+    min-width: 30rem;
+    margin-bottom: 2rem;
+}
+.movieCard:hover{
+    background-color: #eee;
+}
+.backdrop{
+    width: 100%;
+}
 .videoContainer{
     overflow:hidden;
     padding-bottom:56.25%;
